@@ -5,7 +5,10 @@ const spin = document.querySelector<HTMLButtonElement>("#spin")!;
 const face = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 face.setAttribute("viewBox", "0 0 200 200");
 face.setAttribute("role", "img");
-face.setAttribute("aria-label", "A neutral face");
+face.setAttribute(
+  "aria-label",
+  "A nervous character covered in dense freckles",
+);
 
 const head = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
 head.setAttribute("cx", "100");
@@ -58,6 +61,40 @@ mouth.setAttribute("stroke", "#302c29");
 mouth.setAttribute("stroke-width", "4");
 mouth.setAttribute("stroke-linecap", "round");
 face.append(mouth);
+
+// for (let i = 0; i < 12; i++) {
+//   const angle = (i / 12) * Math.PI * 2;
+//   const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+//   dot.setAttribute("cx", String(100 + 86 * Math.cos(angle)));
+//   dot.setAttribute("cy", String(100 + 86 * Math.sin(angle)));
+//   dot.setAttribute("r", "3");
+//   dot.setAttribute("fill", "#563b67");
+//   face.append(dot);
+// }
+
+//freckles loop
+for (let i = 0; i < 105; i++) {
+  const step = (i * 37) % 35;
+  let xCoord = 0;
+  const yCoord = 98 + (i * 13 + step * 2) % 20;
+
+  //separating the freckles on both cheeks
+  if (i < 52) {
+    xCoord = 52 + (i * 7 + step * 3) % 36;
+  } else {
+    xCoord = 112 + (i * 7 + step * 3) % 36;
+  }
+
+  const freckle = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "circle",
+  );
+  freckle.setAttribute("cx", String(xCoord));
+  freckle.setAttribute("cy", String(yCoord));
+  freckle.setAttribute("r", "1.3");
+  freckle.setAttribute("fill", "#794c1e");
+  face.append(freckle);
+}
 
 portrait.append(face);
 
