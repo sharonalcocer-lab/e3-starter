@@ -6,7 +6,7 @@ const portrait = document.querySelector<HTMLDivElement>("#portrait")!;
 const spin = document.querySelector<HTMLButtonElement>("#spin")!;
 
 // The prototype grew inline. Keep it this way until the refactoring checkpoint.
-<<<<<<< HEAD
+
 function buildFace(): SVGSVGElement {
   const face = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   face.setAttribute("viewBox", "0 0 200 200");
@@ -15,15 +15,6 @@ function buildFace(): SVGSVGElement {
     "aria-label",
     "A nervous face with hand drawn sweat drops and a speech bubble image",
   );
-=======
-const face = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-face.setAttribute("viewBox", "0 0 200 200");
-face.setAttribute("role", "img");
-face.setAttribute(
-  "aria-label",
-  "An anxious pixel face sweating with a speech bubble",
-);
->>>>>>> fcb8c8b ([B] Added custom hand-drawn pixel sweat drops and speech bubble images)
 
   const head = document.createElementNS(
     "http://www.w3.org/2000/svg",
