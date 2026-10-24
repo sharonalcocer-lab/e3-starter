@@ -13,3 +13,5 @@ C Color and Curves (explored): A gradiant shifting on both cheeks from an anxiou
 Change: Nothing changed.
 
 Selection: Best suits a nervous, anxious character.
+
+update: I decided to choose branch B because it shows more of the expression of a character that is anxious nervous with the drops of sweat and the bubble. Branch A and C reamain on their own branches.
